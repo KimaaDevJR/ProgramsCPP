@@ -1,0 +1,16 @@
+Soit un tableau booléen tab, indicé par l’intervalle 0..borneRecherchePremiers. On se propose de remplir tab de telle façon que tab[i] soit vrai si et seulement si i est un nombre premier.
+
+L’idée d’Eratosthène est de partir d’un tableau initialement tout à vrai et de barrer (mettre à faux) tous les multiples des nombres premiers déjà détectés. Ainsi :
+
+on barre tous les multiples de 2 ;
+
+on barre tous les multiples de 3 (tant pis si c’est déjà fait pour certains) ;
+
+4 étant barré, on ne fait rien ;
+
+5 n’étant pas barré, il est premier. On barre donc tous ses multiples ;
+
+et ainsi de suite jusqu’à 
+racine carrée borneRecherchePremiers
+
+On souhaite élaborer une procédure determinerPremiers qui considère un nombre entier positif borneRecherchePremiers > 2 et qui remplit un tableau tab (indicé de 0 à borneRecherchePremiers) avec des booléens.
