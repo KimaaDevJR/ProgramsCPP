@@ -15,7 +15,7 @@ using namespace std;
 // Déclaration de la procédure
 
 void eratosthene(bool tableau[], const unsigned int NBCASES);
-// But : 
+// But :
 
 int main(void)
 {
@@ -39,15 +39,15 @@ int main(void)
 
     eratosthene(tab, NB_CASES);
 
+    // Affichage
+
     for (unsigned int i = 0; i < NB_CASES; i++)
     {
         if (tab[i] == true)
         {
             cout << i << " " << endl;
         }
-        
     }
-    
 
     return 0;
 }
@@ -60,12 +60,10 @@ void eratosthene(bool tableau[], const unsigned int NBCASES)
     {
         if (tableau[i] == true)
         {
-            for ( unsigned int multiple = i * i; multiple < NBCASES; multiple += i)
+            for (unsigned int multiple = i * i; multiple < NBCASES; multiple += i)
             {
                 tableau[multiple] = false;
             }
-            
         }
-        
     }
 }
